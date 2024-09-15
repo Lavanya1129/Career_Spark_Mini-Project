@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'poppins',sans-serif;
+    font: size 13px;
+}
+.wrapper{
+    padding:0 0 100px;
+    background-image: url("https://w0.peakpx.com/wallpaper/339/896/HD-wallpaper-library-concepts-stack-of-books-education-background-books-background-with-books-books-on-the-table.jpg");
+    background-position:bottom  center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.wrapper input{
+    background-color:#b0b3b6;
+    border-color:#f5f8fa;
+    color:#808080;
+}
+
+
+</style>
+
+
+
+
+<body>
+ 
+
+
+  <section class="wrapper">
+    <div class="container">
+        <div class="col-sm-8 offset-sm-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 text-center">
+          <br>
+            <form  name="myform" class="rounded bg-white shadow p-5" action="\login"    enctype="multipart/form-data" method="post" onsubmit="return validation()" >
+                <h3 class="text-dark fw-bold fs-4 mb-2">Sign In To "CareerSpark"</h3>
+                <div class="fw-normal text-muted mb-4">
+                    New Here? <a href="{{ url_for('signup')}}" class="text-primary fw-bold text-decoration-none">Create an Account</a>
+                </div>
+                <div class="form-floating mb-3">
+                  <label for="floatingInput">Enter email address</label>
+                    <input type="email" class="form-control" id="floatingInput" placeholder="Enter email here" name="gmail" required>
+                    
+                  </div>
+                  <div class="form-floating">
+
+
+                   <label for="password"><i class="fas fa-lock"></i> Password:</label>
+                   <div class="input-group">
+                   <input type="password" class="form-control" id="password" name="password" required>
+                   <div class="input-group-append">
+                      <span class="input-group-text">
+                        <i class="fas fa-eye-slash" id="togglePassword"></i>
+                </span>
+            </div>
+            </div>
+         </div>
+        
+            <button type="submit" class="btn btn-primary submit_btn w-100 my-4">Sign in</button><span><a href="{{ url_for('main_page') }}" class="btn w=50% bg-warning">back</a></span>
+
+          </form>
+        </div>
+
+
+
+        {% if login_error_message %}
+        <div class="alert alert-danger mt-3" role="alert">
+            {{ login_error_message }}
+        </div>
+    {% endif %}       
+   
+</section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/eceebf9b3f.js" crossorigin="anonymous"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $("#togglePassword").on("click", function() {
+        const passwordField = $("#password");
+        const passwordFieldType = passwordField.attr("type");
+        if (passwordFieldType === "password") {
+          passwordField.attr("type", "text");
+          $("#togglePassword").removeClass("fa-eye-slash").addClass("fa-eye");
+        } else {
+          passwordField.attr("type", "password");
+          $("#togglePassword").removeClass("fa-eye").addClass("fa-eye-slash");
+        }
+      });
+      $("#loginModal").modal("show");
+    });
+
+
+    function validation()
+            {
+                 var password=document.myform.password1.value;
+                 var pass=/^[A-Z][a-z 0-9  @]{8,}$/;
+                if ( !pass.test(password)) {
+                alert("Enter a password with at least 8 characters containing letters, numbers, and '@'.");
+                return false;
+            }
+               
+              /*  if(password.length<8){
+                    alert("enter atleast 8 characters");
+                  return false;
+                }*/
+                 var e=document.myform.email.value;
+                 var pos=e.indexOf("@");
+                 var dpos=e.lastIndexOf(".");
+                 if(pos<1 || dpos<pos+2 || dpos+2>=e.length){
+                    alert("please enter a valid email.\n email must be in the format of \n username@gmail.com") ;
+                    return false;
+                 }
+            }  
+
+  </script>
+  
+</body>
+</html>
+

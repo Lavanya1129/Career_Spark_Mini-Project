@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Records</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% include 'nav.html' %}
+    <style>
+        body {
+          
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            border: 1px solid #e9dddd;
+            border-radius: 8px;
+            box-shadow: 0 5px 9px rgba(136, 68, 68, 0.1);
+            margin: 10px;
+            margin-bottom: 30px; /* Add margin-bottom for space between cards */
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-container {
+            position: relative;
+        }
+
+        img {
+            width: 160px; /* Set the width of the logo */
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .company-name {
+            padding: 15px;
+            background-color:rgb(248, 248, 248); /* Set the background color of the company name section */
+            text-align: center;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: rgb(100, 67, 6);
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            color: #2c2020;
+            margin: 5px 0;
+        }
+
+        strong {
+            color: #4921a7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Company Records</h1>
+
+        <div class="row">
+            {% for record in company_data %}
+                <div class="col-12">
+                    <div class="card">
+                        <div class="logo-container">
+                            <img src="{{ url_for('static', filename=record[0].decode('utf-8')) }}" alt="Company Logo">
+                            <div class="company-name">
+                                <h2><i>{{ record[1] }}</i></h2>
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="card-content">
+                            <p><strong>Overview:</strong> {{ record[2] }}</p>
+                            <!-- Add more headings and fields as needed -->
+                            <p><strong>Website:</strong><a href="{{ record[3]}}" target="blank">{{ record[3] }}</a> </p>
+                            <p><strong>Industry:</strong> {{ record[4] }}</p>
+                            <p><strong>Size:</strong> {{ record[5] }}</p>
+                            <p><strong>Headquarters:</strong> {{ record[6] }}</p>
+                            <p><strong>Founded:</strong> {{ record[7] }}</p>
+                            <p><strong>Specialities:</strong> {{ record[8] }}</p>
+                            <p><strong>Turnover:</strong> {{ record[9] }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+
+    <!-- Bootstrap JS and Popper.js (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    {% include 'footer.html' %}
+
+</body>
+</html>

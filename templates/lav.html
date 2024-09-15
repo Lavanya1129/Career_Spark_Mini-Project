@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CareerSpark{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <style>
+        .italic-title {
+          font-style: italic;
+        }
+      </style>
+
+</head>
+
+<body style="background-color:rgb(255, 255, 255);">
+
+    
+
+    <header>
+        <div class="navbar navbar-expand-md">
+            <button class="hamburger" id="sidebarToggle">
+                <i class="fas fa-bars" id="sidebarToggle"> </i>
+            </button>&nbsp; &nbsp;
+            <div class="logo">CareerSpark</div>
+           
+            <div class="nav-profile">
+               
+                <li>
+                    <a  href="{{ url_for('main_page') }}"><i class="fas fa-home"></i> Home</a>  &nbsp;
+                    <a href="#" data-toggle="modal" data-target="#contactModal">Contact Us</a>
+                <a href="{{ url_for('login')}}" ><i class="fas fa-user"></i> Login</a> &nbsp;
+            
+                <a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i> Profile</a>
+
+                
+                </li>
+            </div>
+        </div>
+    </header>
+    <div class="overlay"></div>
+    
+    <div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('main_page') }}">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about_rgukt') }}">
+                            <i class="fas fa-info-circle"></i> About RGUKT
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-building"></i> Companies
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ url_for('cse')}}"><i class="fas fa-industry"></i> CSE</a>
+                            <a class="dropdown-item" href="{{ url_for('ece')}}"><i class="fas fa-industry"></i> ECE</a>
+                            <a class="dropdown-item" href="{{ url_for('civil')}}"><i class="fas fa-industry"></i> CIVIL</a>
+                            <a class="dropdown-item" href="{{ url_for('chem')}}"><i class="fas fa-industry"></i> CHEM</a>
+                            <a class="dropdown-item" href="{{ url_for('eee')}}"><i class="fas fa-industry"></i> EEE</a>
+                            <a class="dropdown-item" href="{{ url_for('mech')}}"><i class="fas fa-industry"></i> MECH</a>
+                            
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('placement_policy') }}">
+                            <i class="fas fa-briefcase"></i> Placement Policy
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('internship')}}">
+                            <i class="fas fa-briefcase"></i> Internship
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('rules_and_regulations') }}">
+                            <i class="fas fa-book"></i> Rules and Regulations
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('student') }}">
+                            <i class="fas fa-file"></i> Resume Building
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('placement_records') }}">
+                            <i class="fas fa-chart-bar"></i> Placement Records
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+       
+        </nav>
+        <br>
+
+        
+        <div class="container ">
+            <div id="updates-container">
+                <div id="updates"></div>
+            </div>
+            </div>
+
+
+            <div align="right" class="mt-2">
+                <a href="{{ url_for('chat_bot')}}"><button class="btn" style="background-color: rgb(11, 30, 114); color:white;"><i class="fa-solid fa-robot" ></i><b> chatbot</b></button></a>
+            </div>
+
+
+
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content custom-background">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Email:</strong> CareerSpark@rguktrkv.ac.in</p>
+                    <p><strong>Phone:</strong> 8919136876</p>
+                    <p><strong>Address:</strong> RGUKT Rkvalley, kadapa, AndhraPradhesh</p>
+                    <!-- Add more contact details as needed -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn" data-dismiss="modal" style="background-color:rgb(11, 30, 114); color:white;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+        <!-- Content goes here -->
+        {% block content %}  {% endblock %}
+    
+    </div>
+</div>
+
+
+
+<div class="footer-container" style="margin-top: 160px;">
+    <div class="footer-content">
+        <h3 class="footer-h3">Contact Us</h3>
+        <p>Email:careerspark@gmail.com</p>
+        <p>Phone:+121 9133 286456</p>
+        <p>Address:RGUKT rkvalley</p>
+    </div>
+    <div class="footer-content">
+        <h3 class="footer-h3">Quick links</h3>
+        <ul class="list">
+            <li><a href="{{ url_for('cse') }}">Explore Companies</a></li>
+            <li><a href="{{ url_for('student') }}">build your resume</a></li>
+            <li><a href="{{ url_for('about_rgukt') }}">rgukt</a></li>
+            <li><a href="{{ url_for('placement_records') }}">records</a></li>
+        </ul>
+        
+    </div>
+    <div class="footer-content">
+        
+        <img src="{{url_for('static',filename='images/20.jpeg')}}" alt="Image" height=120px width=200px><br>
+        <h3 class="footer-h3">Follow Us</h3>
+        <ul class="social-icons">
+        <li><a href=""><i class="fab fa-instagram fa-2x"></i></a></li>
+        <li><a href=""><i class="fab fa-whatsapp fa-2x"></i></a></li>
+        <li><a href=""><i class="fab fa-telegram fa-2x"></i></a></li>
+        <li><a href=""><i class="fab fa-linkedin  fa-2x"></i></a></li>
+        </ul>
+        
+    </div>
+    
+</div>
+ <div class="bottom-bar">
+  
+        <div class="container-fluid">&copy;2023 CareerSpark. All rights reserved</div>
+    
+    
+</div>
+
+
+
+
+
+  
+  <script src="{{ url_for('static', filename='sc.js') }}"></script> 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/eceebf9b3f.js" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    $("#togglePassword").on("click", function() {
+      const passwordField = $("#password");
+      const passwordFieldType = passwordField.attr("type");
+      if (passwordFieldType === "password") {
+        passwordField.attr("type", "text");
+        $("#togglePassword").removeClass("fa-eye-slash").addClass("fa-eye");
+      } else {
+        passwordField.attr("type", "password");
+        $("#togglePassword").removeClass("fa-eye").addClass("fa-eye-slash");
+      }
+    });
+  });
+</script>
+
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#sidebarToggle").click(function () {
+            $(".sidebar").toggleClass("sidebar-visible");
+            $(".overlay").toggleClass("overlay-visible");
+        });
+
+    });
+
+
+
+
+    const updatesContainer = document.getElementById('updates');
+    const updates = [
+        "Skill Enhancement Workshops",
+        "TCS Recruitment Drives",
+        "Placement Test Updates",
+        "wipro visited scheduled",
+        "Internship Fair Organized"
+        
+    ];
+
+    let index = 0;
+
+    function showNextUpdate() {
+        updatesContainer.innerHTML = updates[index];
+        index = (index + 1) % updates.length;
+    }
+
+    // Initial update
+    showNextUpdate();
+
+    // Set interval to change updates every 3 seconds (adjust as needed)
+    setInterval(showNextUpdate, 2000);
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Add click event listener to the login button
+        document.getElementById('loginModalToggle').addEventListener('click', function () {
+            // Open the login modal
+            $('#loginModal').modal('show');
+        });
+    });
+
+
+ 
+</script>
+
+
+
+</body>
+</html>
+
+
+

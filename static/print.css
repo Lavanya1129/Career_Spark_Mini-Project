@@ -1,0 +1,34 @@
+/* print.css */
+@media print {
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 10px; /* Add margin at the bottom of the table */
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 5px;
+    }
+    th {
+        text-align: left;
+        border-bottom: 2px solid black; /* Add a border at the bottom of each th */
+        border-left: 2px solid black;
+    }
+    th:last-child {
+        border-right: 2px solid black; /* Add a border to the right of the last th */
+    }
+    td {
+        text-align: left;
+        border-bottom: 2px solid black; /* Add a border at the bottom of each td */
+        border-left: 2px solid black;
+    }
+    .data {
+        text-align: left;
+    }
+    td:first-child {
+        padding-left: 10px; /* Add padding to the first column cells */
+    }
+}
+
+
+

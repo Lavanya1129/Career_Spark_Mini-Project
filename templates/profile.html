@@ -1,0 +1,17 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <!-- Include your CSS and other necessary links here -->
+</head>
+<body>
+    <h2>User Profile</h2>
+    <p>Name: {{ user_data[0] }} {{ user_data[1] }}</p>
+    <p>Email: {{ user_data[4] }}</p>
+    <!-- Add more user details as needed -->
+    
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!-- main.html -->
+{% extends 'lav.html' %}
+
+{% block content %}
+
+
+
+
+
+
+    <div class="container pt-5 mt-5" >
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card" style="background-color:rgb(234, 237, 238);">
+                    <img src="{{ url_for('static', filename='images/3.png') }}" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <br>
+                        <p class="card-text">
+                            Congratulations to our beloved seniors for securing an placement  at <strong>ZFELECTRONICS </strong> Company. 
+                            We wish you success in your new role and hope you have a valuable learning experience.
+                        </p>
+                        
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card"  style="background-color:rgb(234, 236, 238);">
+                    <img src="{{ url_for('static', filename='images/1.jpeg') }}" class="card-img-top" alt="Card Image">
+                    <div class="card-body"><br>
+                        <p class="card-text" >
+                            A big shoutout to Mark ....for splacing as lectures at <strong>Aakash Byju's</strong>.<br><br>
+
+                                Your hard work has paid off, and we wish you a fantastic succesful and happiest  journey.
+                            
+                   
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card"  style="background-color:rgb(234, 236, 238);">
+                    <img src="{{ url_for('static', filename='images/2.png') }}" class="card-img-top" alt="Card Image">
+                    <div class="card-body"><br>
+                        <p class="card-text">
+                            We are thrilled to announce that Malleswari and Naveen Kumar has been selected for an internship at <strong>STOCKONE</strong> Corporation.
+                            This achievement reflects them dedication and skills. 
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<br><br>
+  
+    
+   <div class="container-fluid mt-5 mb-5">
+        
+           
+           <div class="marquee">
+              <img src="{{ url_for('static', filename='images/c2.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c3.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c8.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c9.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c11.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c12.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c13.jpeg') }}" alt="Company Logo">
+              
+              <!-- Add more images of company logos here -->
+            <img src="{{ url_for('static', filename='images/c15.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c16.jpeg') }}" alt="Company Logo">
+               <img src="{{ url_for('static', filename='images/c17.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c19.jpeg') }}" alt="Company Logo">
+               <img src="{{ url_for('static', filename='images/c20.jpeg') }}" alt="Company Logo">
+              <img src="{{ url_for('static', filename='images/c21.jpeg') }}" alt="Company Logo">
+                <img src="{{ url_for('static', filename='images/c18.jpeg') }}" alt="Company Logo">
+           </div>
+        
+        </div>
+
+<br><br><br>
+
+<div class="container">
+        
+    <div class="row">
+        <div class="col-12">
+            <p>The CareerSpark of RGUKT RKvalley, was established to act as a catalyst in providing students with 				options to develop themselves professionally into streams that match their aptitudes. Considering the economic and 					educational backgrounds the students come from, the Careerspark is shouldering the challenging responsibility of 					making these students stand up to the challenges of modern world- professionally as well as personally. </p>
+        </div>
+    </div>
+    <!-- Second row of text -->
+    <div class="row">
+        <div class="col-sm-9">
+            <p>In addition to campus placements, the careerspark organizes Professional Development programs like 				Internships, companies data, Resume Building, interactive sessions with programs like talks, 					interactivesessions with industrial experts, case studies etc and personality development programs covering 					communication skill, presentation skills, group dynamics, career planning etc., on a regular basis to enable the 					students to acquire the necessary traits to become employable.</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="{{ url_for('static', filename='images/18.jpeg') }}" alt="Image" height=120px width=130px>
+        </div>
+    </div>
+    <!-- Third row of text -->
+    
+
+</div>
+
+<br><br>
+<div class="container mt-5">
+<section class="our-commitment common-section bg-gray">
+
+    <h4>our commitment</h4>
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="our-commitment-card">
+                <div class="our-commitment-img justify-content-center d-flex">
+                    <img src="{{url_for('static',filename='images/commitment1.png')}}" alt="warehouse inventory management">
+                </div>
+                <h5 class="text-center mt-2"> Up To Dates</h5>
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="our-commitment-card">
+                <div class="our-commitment-img justify-content-center d-flex">
+                    <img src="{{url_for('static',filename='images/commitment2.png')}}" alt="warehouse inventory management">
+                </div>
+                <h5 class="text-center mt-2"> 99.9% Uptime</h5>
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="our-commitment-card">
+                <div class="our-commitment-img justify-content-center d-flex">
+                    <img src="{{url_for('static',filename='images/commitment3.png')}}" alt="warehouse inventory management">
+                </div>
+                <h5 class="text-center mt-2"> 24/7 Support</h5>
+            </div>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="our-commitment-card">
+                <div class="our-commitment-img justify-content-center d-flex">
+                    <img src="{{url_for('static',filename='images/commitment4.png')}}" alt="warehouse inventory management">
+                </div>
+                <h5 class="text-center mt-2"> 10 Min Response Time</h5>
+            </div>
+
+        </div>
+   
+</div>
+</section>
+</div>
+<!--
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100 italic-title" id="loginModalLabel">CareerSpark</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+<form action="/login" method="post">
+<div class="form-group italic-title">
+<label for="gmail"><i class="fas fa-envelope"></i>Gmail:</label>
+<input type="text" class="form-control" id="gmail" name="email" required>
+</div>
+<div class="form-group italic-title">
+<label for="password"><i class="fas fa-lock"></i> Password:</label>
+<div class="input-group">
+<input type="password" class="form-control" id="password" name="password" required>
+<div class="input-group-append">
+  <span class="input-group-text">
+    <i class="fas fa-eye-slash" id="togglePassword"></i>
+  </span>
+</div>
+</div>
+</div>
+<button type="submit" class="btn btn-primary btn-block">Login</button>
+<br>
+<p>Don't Have an Account? <a href="{{ url_for('signup')}}">SignUp</a></p>
+</form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/eceebf9b3f.js" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $("#togglePassword").on("click", function() {
+        const passwordField = $("#password");
+        const passwordFieldType = passwordField.attr("type");
+        if (passwordFieldType === "password") {
+          passwordField.attr("type", "text");
+          $("#togglePassword").removeClass("fa-eye-slash").addClass("fa-eye");
+        } else {
+          passwordField.attr("type", "password");
+          $("#togglePassword").removeClass("fa-eye").addClass("fa-eye-slash");
+        }
+      });
+
+      // Open the modal on document ready
+      $("#loginModal").modal("show");
+    });
+  </script>
+  <style>
+    .italic-title {
+      font-style: italic;
+    }
+  </style>
+
+   
+{% endblock %}
+

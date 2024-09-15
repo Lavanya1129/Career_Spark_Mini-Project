@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print and Download CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='print.css') }}" media="print">
+
+    <style>
+
+.main_page {
+    margin: 20px; /* Example margin, adjust as needed */
+  }
+  
+  .content_section_text {
+    margin-bottom: 10px; 
+    color: #381515;
+    font-size: medium;
+    align-items:center ;
+  }
+  
+  .data {
+    text-align: center;
+    /* Add other styles specific to .data here */
+  }
+  
+  .section_header {
+    background-color: #f2f2f2; /* Example background color, adjust as needed */
+    color: #0e0505; /* Example text color, adjust as needed */
+    font-size: 15px; /* Example font size, adjust as needed */
+    font-weight: bold; /* Example font weight, adjust as needed */
+    padding: 5px; /* Example padding, adjust as needed */
+    margin-bottom: 10px; /* Example margin, adjust as needed */
+    align-items: center;
+
+    /* Add other styles specific to .section_header_grey here */
+  }
+    </style>
+    
+          
+      </head>
+<body>
+
+    <div class="main_page">
+      <div class="content_section_text data">
+        <h4><center>Resume Building</center></h4>
+        
+        Name:&nbsp;&nbsp;&nbsp;{{name}} <br>
+        E-mail:&nbsp;&nbsp;&nbsp;{{email}} <br>
+        Contact:&nbsp;&nbsp;&nbsp;{{contact}} <br>
+      </div>
+      <div class="content_section floating_element">
+        <div class="section_header">
+         <h2>OBJECTIVE:</h2>
+        </div>
+        <div class="content_section_text">
+          <p>
+               To seek an entry level position in a growth oriented organization while further enhancing my skills and capabilities.
+          </p>
+
+
+          
+        </div>
+        <div class="section_header">
+            ACEDEMIA:
+          </div><br>
+          <div class="content_section_text">
+            <table style="width:100%" border="2">
+              <thead>
+                <tr>
+                  <th>QUALIFICATION</th>
+                  <th>BOARD/UNIVERSITY</th> 
+                  <th>SUBJECTS</th>
+                  <th>PASSING YEAR</th>
+                  <th>MARKS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Graduation</td>
+                  <td>{{gb}}</td>
+                  <td>{{gs}}</td>
+                  <td>{{gp}}</td>
+                  <td>{{gm}}</td>
+                </tr>
+  <tr>
+    <td>Intermediate</td>
+    <td>{{tvm}}</td>
+    
+  </tr>
+  
+              </tbody>
+</table>
+               
+        </div>
+
+
+         <div class="section_header">
+          PROJECTS UNDERTAKEN:
+        </div>
+        <div class="content_section_text">
+          {{projetcs}}
+               
+        </div>
+
+         <div class="section_header">
+          SKILLS:
+        </div>
+        <div class="content_section_text">
+          
+              {{skills}} 
+        </div>
+
+
+         <div class="section_header">
+          HONOUR AND ACHIEVEMENTS:
+        </div>
+        <div class="content_section_text">
+          {{achievements}}
+               
+        </div>
+
+
+         <div class="section_header">
+          PERSONAL INFORMATION:
+        </div>
+        <div class="content_section_text">
+          Father’s Name : &nbsp;&nbsp;&nbsp;{{fathername}}<br>
+          Permanent Address:&nbsp;&nbsp;{{residance}}<br> 
+          Residential Landline No - {{residance}}<br>
+          Date of Birth :&nbsp; {{dob}}<br>
+          Languages Known: &nbsp;&nbsp; {{lang}}<br>
+               
+        </div>
+      </div>
+    </div>
+   
+    
+
+</body>
+</html>

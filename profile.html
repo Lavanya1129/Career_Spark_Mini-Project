@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... (existing meta tags and title) ... -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="back.css">
+    <!-- Additional Galaxy Theme CSS -->
+    <link rel="stylesheet" href="galaxy-theme.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 offset-md-3">
+                <h1>User Profile</h1>
+                <ul>
+                    <li><strong>First Name:</strong> {{ user_details.first_name }}</li>
+                    <li><strong>Last Name:</strong> {{ user_details.last_name }}</li>
+                   
+                    <li><strong>Gmail:</strong> {{ user_details.gmail }}</li>
+                    
+                    
+                    <!-- Add other user details as needed -->
+                    <li><strong>Profile Photo:</strong> <img src="{{ user_details.profile_photo }}" alt="Profile Photo"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Card Example</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  {% include 'nav.html' %}
+  
+  <style>
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+        
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+     background: linear-gradient(135deg, rgb(161, 176, 209), rgb(176, 243, 255),rgb(176, 204, 255));
+    }
+
+    .card-title {
+      color: #333;
+    }
+
+    .card-text {
+      color: #555;
+    }
+
+    b {
+      color: #000;
+    }
+
+    .container {
+      padding-top: 50px;
+      color : #333;
+    }
+    </style>
+  
+ 
+
+</head>
+<body>
+<div class="container mt-2 ">
+ <div class="row">
+ 	<div class="col-12"><h4><font font color="black"><u> Rules and Procedures : </u></font></h4></div>
+ </div>
+</div>
+
+
+<div class="container pt-5 mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><u><b>Guideline for Placements</b></u></h5>
+          <p class="card-text"><b>1.</b>Student Registration - Master Placement Registration Data</p>
+          <p class="card-text"><b>2.</b>Student Registration For A Particular Company Placement Process</p>
+          <p class="card-text"><b>3.</b>Placement Selection Process</p>
+          <p class="card-text"><b>4.</b>Procedure To Be Followed When A Company Visits</p>
+          <p class="card-text"><b>5.</b>Off Campus Opportunities</p>
+          <p class="card-text"><b>6.</b>Invitation To Companies For Placements</p>
+          <p class="card-text"><b>7.</b>Department Faculty Representatives And Student Representatives</p>
+          
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><b><u>Objectives Of CareerSpark Cell</u></b></h5>
+           <p class="card-text"><b>1.</b>To guide and help in imparting quality practical experience through internship opportunities</p>
+            <p class="card-text"><b>2.</b>To develop confidence building to face the selection process of job recruiter</p>
+             <p class="card-text"><b>3.</b>To provide information and training for the competitive examinations conducted by Govt. of India 			like Civil Services, IEE,  etc.</p>
+              <p class="card-text"><b>4.</b>To inform on off campus job and research position opportunities</p>
+              
+          <p class="card-text"><b>5.</b>To guides in higher education and research opportunities.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<center><a href="{{url_for('main_page')}}"><button class="btn mt-5 " style="background-color:   rgb(11, 30, 114); color:white;;">Go Back</button></a></center>	
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+{% include 'footer.html' %}
+</body>
+</html>
+

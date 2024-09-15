@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>ABOUT RGUKT</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+{% include 'nav.html' %}
+<style>
+	.italic-title {
+	  font-style: italic;
+	}
+  </style>
+
+
+</head>
+<body>
+	
+<div class=" container pt-3 mt-5 ">
+		<h5><b><font font color="#2E151B"><u>About RGUKT :</u></font></b></h5>
+</div>
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-12"><br> <p><b>Establishment and Vision: :</b>RGUKT RK Valley was established in 2008 by the Government of Andhra 			Pradesh.The university aims to provide high-quality education and empower students from rural backgrounds in the fields of 			technology and innovation.</p>
+        		<p><b>Campus and Infrastructure:</b>     The campus is situated amidst the scenic beauty of the Eastern Ghats in Kadapa 					district, Andhra Pradesh.It boasts modern infrastructure, state-of-the-art laboratories, well-equipped classrooms, 					and residential facilities for students..</p>
+
+			<p><b>Academic Programs:</b>     The university primarily offers a six-year integrated program leading to a Bachelor of 					Technology (B.Tech) degree.Specializations are available in various branches such as Computer Science and 					Engineering, Electronics and Communications Engineering, Chemical Engineering, and more.
+    				The curriculum is designed to foster innovation, research, and practical learning.</p>
+
+			<p><b>Admission Process: </b>    Admission to RGUKT RK Valley is highly competitive and is based on the performance in the 					state-level entrance examination (APRGUCET/AP IIIT). The university primarily caters to students from rural 					backgrounds who have excelled academically..</p>
+
+			<p><b>Unique Pedagogy::</b>     RGUKT RK Valley follows a unique pedagogy that emphasizes a holistic approach to 					education, integrating theoretical knowledge with practical applications.The curriculum includes projects, 					internships, and industry collaborations to ensure students are well-prepared for real-world challenges..</p></div>
+	</div>
+</div>
+	<div class="container pt-5">
+   		 <div class="row">
+        		<div class="col-md-4"><img src="{{ url_for('static', filename='images/27.jpeg') }}" width="300" height="200"></div>
+        		<div class="col-md-4"><img src="{{ url_for('static', filename='images/31.jpeg') }}" width="300" height="200"></div>
+        		<div class="col-md-4"><img src="{{ url_for('static', filename='images/28.jpeg') }}" width="300" height="200"></div>
+        	</div>
+	</div>
+	<div class="container pt-5">
+    		<div class="row">
+        		<div class="col-md-12"><p><b> Research and Innovation: :</b>     The university encourages research and innovation among 					its students and faculty. It provides ample opportunities for students to engage in research projects, fostering a 					culture of curiosity and creativity..</p>
+
+    					<p><b> Faculty and Resources: :</b> The faculty comprises experienced educators, researchers, and industry 							experts who provide guidance and mentorship to students.The university offers access to libraries, 							online resources, and various academic support services to facilitate learning.</p>
+
+    					<p><b> Extracurricular Activities:</b> RGUKT RK Valley encourages students to engage in extracurricular 							activities such as sports, cultural events, clubs, and societies to foster a well-rounded 							development..</p>
+
+   					 <p><b> Alumni Network and Placements: </b>     The university has a growing alumni network, with graduates 							placed in reputed companies and pursuing higher education in esteemed institutions worldwide. The 						placement cell assists students in securing internships and job opportunities, facilitating their 						transition into the professional world.</p>
+
+   					 <p><b>Community Engagement and Social Initiatives: </b>RGUKT RK Valley actively engages with the local 							community through various outreach programs, contributing to societal development and addressing 							regional challenges.</p>
+
+					<p>RGUKT RK Valley stands as a prominent institution dedicated to providing quality education, fostering 						innovation, and shaping future technocrats while emphasizing holistic development and social 							responsibility.</p></div>
+					
+		</div>
+	</div>
+<center><a href="{{url_for('main_page')}}"><button class="btn mb-4 mt-2" style="background-color: rgb(11, 30, 114); color:white;">Go Back</button></a></center>	
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>

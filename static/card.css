@@ -1,0 +1,42 @@
+/* styles.css */
+
+.card {
+    margin: 20px;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     background-image: url('16.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+}
+
+.card-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-body {
+    padding: 10px;
+    overflow: hidden; /* Hide the scroll bars */
+}
+
+.updates {
+    animation: scroll-up 10s linear infinite;
+}
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-60% - 20px)); /* Adjust as needed */
+    }
+}
+
+.updates div {
+    margin-bottom: 10px;
+}
+
